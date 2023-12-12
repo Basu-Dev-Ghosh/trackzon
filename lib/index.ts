@@ -127,11 +127,14 @@ export async function addUserEmailToProduct(
     const userExists = product.users.some(
       (user: User) => user.email === userEmail
     );
+    // console.log(userExists);
 
     if (!userExists) {
       product.users.push({ email: userEmail });
       await product.save();
       const emailContent = await generateEmailBody(product, "WELCOME");
+      // console.log(emailContent);
+
       return await sendEmail(emailContent, [userEmail]);
     } else {
       throw new Error("User already on our list");

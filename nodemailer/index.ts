@@ -91,7 +91,9 @@ export const sendEmail = async (
     return new Promise((resolve, reject) => {
       transporter.sendMail(mailOptions, (error: any, info: any) => {
         if (error) {
-          reject(false);
+          console.log(error);
+
+          reject(error);
         }
         if (info) {
           // console.log(info);
@@ -101,6 +103,8 @@ export const sendEmail = async (
       });
     });
   } catch (err) {
+    console.log(err);
+
     return false;
   }
 };

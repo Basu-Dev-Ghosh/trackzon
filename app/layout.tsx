@@ -8,8 +8,9 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chat Lang",
-  description: "Chat in any language",
+  title: "Trackzon - Track your favourite products",
+  description:
+    "Track your favourite products and get notified when price drops",
 };
 
 export default function RootLayout({
