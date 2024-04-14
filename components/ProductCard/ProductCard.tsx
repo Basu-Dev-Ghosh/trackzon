@@ -22,11 +22,11 @@ const ProductCard = ({ product }: { product: Product }) => {
         </span>
       </Link>
       <div className="mt-4 px-5 pb-5">
-        <a href="#">
+        <Link href={`/products/${product._id}`}>
           <h5 className="text-xl tracking-tight text-slate-900 dark:text-white">
             {product.title.split(" ").slice(0, 5).join(" ")}
           </h5>
-        </a>
+        </Link>
         <div className="mt-2 mb-5 flex items-center justify-between">
           <p>
             <span className="text-3xl font-bold text-slate-900 dark:text-white">
